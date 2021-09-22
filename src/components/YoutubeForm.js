@@ -8,6 +8,10 @@ const initialValues = {
   channel: "",
   comments: "",
   address: "",
+  social: {
+    facebook: "",
+    instagram: "",
+  },
 };
 const onSubmit = (values) => {
   console.log("Form data", values);
@@ -66,6 +70,14 @@ const YoutubeForm = () => {
               );
             }}
           </Field>
+        </div>
+        <div className="form-control">
+          <label htmlFor="facebook">Facebook profile</label>
+          <Field type="text" id="facebook" name="social.facebook" />
+        </div>
+        <div className="form-control">
+          <label htmlFor="instagram">Instagram profile</label>
+          <Field type="text" id="instagram" name="social.instagram" />
         </div>
         <button type="submit">Submit</button>
       </Form>
